@@ -18,3 +18,6 @@ pollute污染
 flare火光；耀；斑；闪耀；向外张开
 prototype：原型
 constructor：建筑师，制造商
+
+for of 遍历数组
+for in 遍历对象

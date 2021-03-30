@@ -35,14 +35,7 @@ export default {
       console.log(mymap.value)
       map.centerAndZoom(new window.BMap.Point(116.403748, 39.914336), 16)
     }
-    return {
-      count,
-      double,
-      increated,
-      obj,
-      arr,
-      mymap
-    }
+    return { count, double, increated, obj, arr, mymap }
   }
 }
 </script>

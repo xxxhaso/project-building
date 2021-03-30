@@ -12,6 +12,7 @@
           </el-form-item>
           <el-form-item>
             <el-button type="primary" style="width:100%" @click="jump('ruleForm')" >登录</el-button>
+            <el-button @click="test">测试</el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -50,6 +51,9 @@ export default {
           return false
         }
       })
+    },
+    test () {
+
     }
   }
 }
