@@ -21,6 +21,7 @@
 </template>
 
 <script>
+// import createStore from '../store/index.js'
 export default {
   name: 'homePage',
   data: function () {
@@ -53,7 +54,6 @@ export default {
       })
     },
     test () {
-
     }
   }
 }

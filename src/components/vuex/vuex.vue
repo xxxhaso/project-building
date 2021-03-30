@@ -7,7 +7,7 @@
     <el-col :span="6"><el-button @click="vuex">打印vuex数据</el-button></el-col>
     <el-col :span="6"><el-button v-if="vif">VUEX</el-button></el-col>
     <el-col :span="6"><el-button @click="pushCollects(items)">mutations(同步)</el-button></el-col>
-    <el-col :span="6"><el-button @click="showFooter(items)">action(异步)</el-button></el-col>
+    <el-col :span="6"><el-button @click="showFooter(items)">action(异步)1</el-button></el-col>
   </el-row>
 </div>
 </template>

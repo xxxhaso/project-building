@@ -2,6 +2,9 @@
   <div>
     <el-row>
       <el-col :span="4">
+        <div style="width:100%;background-color:aliceblue;border-right: solid 1px #e6e6e6;height:100px">
+         <img src="../../assets/logo.png" style="height: 100%;cursor:pointer;" @click="HomePicture">
+          </div>
       <el-menu
       default-active="1"
       class="el-menu-vertical-demo changeSt"
@@ -25,6 +28,9 @@ export default {
     return {}
   },
   methods: {
+    HomePicture () {
+      alert(1)
+    }
   }
 }
 </script>
@@ -37,5 +43,8 @@ a{
 .changeSt{
 width:100%;
 background-color: aliceblue
+}
+.click{
+  background:url("../../assets/logo.png")
 }
 </style>
