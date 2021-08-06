@@ -45,7 +45,7 @@ export default {
     jump (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid && this.ruleForm.account === 'xhxhxhy' && this.ruleForm.password === 'kunapikal1') {
-          this.$router.push({ path: 'postman' })
+          this.$router.push({ path: '/vuexFunc' })
         } else {
           alert('账号或密码错误')
           console.log('error submit!!')

@@ -46,7 +46,7 @@ export default {
         if (valid && this.ruleForm.account === 'xhxhxhy' && this.ruleForm.password === 'kunapikal1') {
           console.log(this.ruleForm)
           sessionStorage.setItem('key', JSON.stringify(this.ruleForm))
-          this.$router.push('/content')
+          this.$router.push('/vuexFunc')
         } else {
           alert('账号或密码错误')
           console.log('error submit!!')

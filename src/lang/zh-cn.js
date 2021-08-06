@@ -5,6 +5,6 @@ module.exports = {
     i18n: '国际化'
   },
   vuex: {
-    title: '这一块是vuex'
+    title: 'Vuex使用实例'
   }
 }

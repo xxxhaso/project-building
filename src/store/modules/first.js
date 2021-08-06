@@ -23,6 +23,9 @@ const mutations = {
   },
   pushCollects (state, items) {
     state.collects.push(items)
+  },
+  exampleMutations (state, data) {
+    state.changeNum = data.ID
   }
 }
 const actions = {
@@ -37,6 +40,9 @@ const actions = {
   },
   showFooter (context, item) {
     context.commit('pushCollects', item)
+  },
+  exampleActions (context, item) {
+    state.changeNum = item.ID
   }
 }
 export default {

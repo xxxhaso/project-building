@@ -1,19 +1,31 @@
 <template>
-<div style="background-color:#F0F1F1">
-  <el-row>
-    <el-col :span="24">{{$t('vuex.title')}}</el-col>
-  </el-row>
-  <el-row >
-    <el-col :span="6"><el-button @click="vuex">打印vuex数据</el-button></el-col>
-    <el-col :span="6"><el-button v-if="vif">VUEX</el-button></el-col>
-    <el-col :span="6"><el-button @click="pushCollects(items)">mutations(同步)</el-button></el-col>
-    <el-col :span="6"><el-button @click="showFooter(items)">action(异步)1</el-button></el-col>
-  </el-row>
-</div>
+  <div style="background-color:#F0F1F1">
+    <el-row>
+      <el-col :span="24">{{$t('vuex.title')}},打开开发者工具看打印数据</el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="12">
+        <el-button @click="pushCollects(items)">辅助函数传参调用Vuex Mutations同步方法</el-button>
+        <el-button @click="vuexMutations">普通方法调用Vuex Mutations同步方法</el-button>
+      </el-col>
+      <el-col :span="12">
+        <el-button @click="showFooter(items)">辅助函数传参调用Vuex Actions异步方法</el-button>
+        <el-button @click="vuexActions">普通方法调用Vuex Actions异步方法</el-button>
+      </el-col>
+      <el-col :span="12" style="margin-top:50px">
+        <el-button @click="vuexGetters">调用Vuex Getters的普通方法</el-button>
+        <p>{{$store.getters['first/getChangeNum']}} 普通调用Vuex Getters展示在标签</p>
+        <p>{{vif}} 辅助函数调用Vuex Getters展示在标签</p>
+      </el-col>
+      <el-col :span="12" style="margin-top:50px">
+        <p>{{$store.state.first.changeNum}} 普通方法调用Vuex State展示在标签</p>
+        <p>{{isShow}} 辅助函数调用Vuex State展示在标签</p>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
-import { getMapCsv } from '@/api/login'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
   name: 'vuex',
@@ -21,12 +33,11 @@ export default {
     return {
       endTime: 123123,
       Condition: [],
-      items:
-        {
-          id: 0,
-          name: 'ljw',
-          sex: 'man'
-        }
+      items: {
+        id: 0,
+        name: 'ljw',
+        sex: 'man'
+      }
     }
   },
   computed: {
@@ -45,21 +56,24 @@ export default {
     })
   },
   mounted () {
-    this.getMapCsv()
   },
   methods: {
-    getMapCsv () {
-      getMapCsv().then((response) => {
-        console.log(response)
-        // 打印不出数据
+    vuexMutations () {
+      this.$store.commit('first/exampleMutations', {
+        ID: 100,
+        BrandID: 402
       })
+      console.log(this.$store.state.first.changeNum)
     },
-    vuex () {
-      console.log(this.vif)
-      console.log(this.isShow)
-      console.log(this.mydata)
-      console.log(this.second)
-      console.log(this.myfristdata)
+    vuexActions () {
+      this.$store.dispatch('first/exampleActions', {
+        ID: 999,
+        BrandID: 402
+      })
+      console.log(this.$store.state.first.changeNum)
+    },
+    vuexGetters () {
+      console.log(this.$store.getters['first/getChangeNum'])
     },
     ...mapActions('first', [
       // first是store中的JS文件 showFooter是再First中定义的方法
@@ -74,5 +88,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>

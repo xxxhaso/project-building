@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="min-height:900px">
   <!-- <el-row>
     <el-col :span="8" style="border:1px solid red"></el-col>
     <el-col :span="16"> -->

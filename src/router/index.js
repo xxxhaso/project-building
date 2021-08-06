@@ -13,7 +13,18 @@ const routes = [
     // beforeEnter: (to, from, next) => {
     //   // 路由独享守卫，只有当进入这个路由的时候才会触发，与全局前置守卫的参数一致
     // }
+  },
 
+  {
+    path: '/',
+    component: () => import('../components/homePage/project.vue'),
+    children: [
+      {
+        path: '/vuexFunc',
+        name: 'vuexFunc',
+        component: () => import('../components/vuex/vuex.vue')
+      }
+    ]
   },
   // {
   //   path: '/',
