@@ -14,9 +14,10 @@
           style=" background:#233A40;color:rgba(255, 255, 255, .75)"
         >
           <el-menu-item index="/content" style="font-size:18px;font-weight: 500;font-family: Microsoft YaHei;background-color:#233A40;">首页</el-menu-item>
-          <el-menu-item index="/vuex" style="font-size:18px;font-weight: 500;padding-left:24px;font-family: Microsoft YaHei;background-color:#233A40;">VUEX</el-menu-item>
+          <el-menu-item index="/vuexFunc" style="font-size:18px;font-weight: 500;padding-left:24px;font-family: Microsoft YaHei;background-color:#233A40;">VUEX</el-menu-item>
           <el-menu-item index="/i18n" style="font-size:18px;font-weight: 500;padding-left:24px;font-family: Microsoft YaHei;background-color:#233A40;">i18n</el-menu-item>
-          <el-menu-item index="/prototype" style="font-size:18px;font-weight: 500;padding-left:24px;font-family: 微软雅黑;background-color:#233A40;">原型链</el-menu-item>
+          <el-menu-item index="/designPattern" style="font-size:18px;font-weight: 500;padding-left:24px;font-family: 微软雅黑;background-color:#233A40;">原型链</el-menu-item>
+          <el-menu-item index="/study" style="font-size:18px;font-weight: 500;padding-left:24px;font-family: 微软雅黑;background-color:#233A40;">学习</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="8" >

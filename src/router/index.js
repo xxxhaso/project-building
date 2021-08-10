@@ -14,7 +14,6 @@ const routes = [
     //   // 路由独享守卫，只有当进入这个路由的时候才会触发，与全局前置守卫的参数一致
     // }
   },
-
   {
     path: '/',
     component: () => import('../components/homePage/project.vue'),
@@ -23,9 +22,30 @@ const routes = [
         path: '/vuexFunc',
         name: 'vuexFunc',
         component: () => import('../components/vuex/vuex.vue')
+      },
+      {
+        path: '/i18n',
+        name: 'i18n',
+        component: () => import('../components/i18n/i18n.vue')
+      },
+      {
+        path: '/content',
+        name: 'content',
+        component: () => import('../components/homePage/content.vue')
+      },
+      {
+        path: '/designPattern',
+        name: 'designPattern',
+        component: () => import('../components/designPattern/Observer.vue')
+      },
+      {
+        path: '/study',
+        name: 'study',
+        component: () => import('../components/study/study.vue')
       }
     ]
   },
+
   // {
   //   path: '/',
   //   component: Home,
